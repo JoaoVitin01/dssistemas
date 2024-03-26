@@ -10,7 +10,8 @@
 
 <body>
   <div class="container">
-    <div class="coluna">
+    <div class="row">
+     <div class="rol">
         <?php 
 
         include "conexao.php";
@@ -33,10 +34,11 @@
         
         ?>
         <hr>
-         <a href="index.php" class="btn btn-primary">voltar</a>
+         <a href="inicio.php" class="btn btn-primary">voltar</a>
 
       </div>
 
+    </div>
     </div>
  
 
