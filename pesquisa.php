@@ -31,7 +31,7 @@
                     <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">id</th>
+      
       <th scope="col">Nome</th>
       <th scope="col">Endereço</th>
       <th scope="col">telefone</th>
@@ -43,6 +43,30 @@
 
   </thead>
   <tbody>
+    <?php
+    while($linha = mysqli_fetch_assoc(($dados))){
+        $nome = $linha['nome'];
+        $endereco = $linha['endereco'];
+        $telefone = $linha['telefone'];
+        $data = $linha['data'];
+        $email = $linha['email'];
+
+        echo"<tr>
+
+        <td>$nome</td>
+        <td>$endereco</td>
+        <td>$telefone</td>
+        <td>$data</td>
+        <td>$email</td>
+        <td>
+
+        </td>
+
+        </tr>";
+
+
+    }
+    ?>
     
   </tbody>
 </table>
@@ -51,7 +75,7 @@
             </div>
         </div>
     </div>
-
+    <a href="inicio.php" class=" btn btn-info">Voltar ao Inicio</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
