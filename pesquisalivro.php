@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <?php   
+    <?php
     $pesquisali = $_POST['buscali'] ?? '';
     include "conexao.php";
 
     $sql = "SELECT * FROM livros where titulo LIKE '%$pesquisali%'";
-    $dadosli = mysqli_query($conexao,$sql);
+    $dadosli = mysqli_query($conexao, $sql);
     ?>
     <div class="container">
         <div class="row">
@@ -29,31 +29,31 @@
                         </form>
                     </div>
                     <table class="table table-hover">
-  <thead>
-    <tr>
-      
-      <th scope="col">titulo</th>
-      <th scope="col">ano de publicação</th>
-      <th scope="col">categoria</th>
-      <th scope="col">editora</th>
-      <th scope="col">isbn</th>
-      <th scope="col">autor</th>
-      <th scope="col">Ações</th>
-      
-    </tr>
+                        <thead>
+                            <tr>
 
-  </thead>
-  <tbody>
-    <?php
-    while($linhali = mysqli_fetch_assoc($dadosli)){
-        $titulo = $linhali['titulo']; 
-        $anopul = $linhali['anopubli'];
-        $cate = $linhali['categoria'];
-        $editora = $linhali['editora'];
-        $isbn = $linhali['isbn'];
-        $autor = $linhali['autor'];
+                                <th scope="col">titulo</th>
+                                <th scope="col">ano de publicação</th>
+                                <th scope="col">categoria</th>
+                                <th scope="col">editora</th>
+                                <th scope="col">isbn</th>
+                                <th scope="col">autor</th>
+                                <th scope="col">Ações</th>
 
-        echo"<tr>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <?php
+                            while ($linhali = mysqli_fetch_assoc($dadosli)) {
+                                $titulo = $linhali['titulo'];
+                                $anopul = $linhali['anopubli'];
+                                $cate = $linhali['categoria'];
+                                $editora = $linhali['editora'];
+                                $isbn = $linhali['isbn'];
+                                $autor = $linhali['autor'];
+
+                                echo "<tr>
 
         <td>$titulo</td>
         <td>$anopul</td>
@@ -69,24 +69,22 @@
         </td>
 
         </tr>";
+                            }
+                            ?>
 
-
-    }
-    ?>
-    
-  </tbody>
-</table>
-    <a href="homelivro.php" class="btn btn-info">Voltar</a>
+                        </tbody>
+                    </table>
+                    <a href="homelivro.php" class="btn btn-info">Voltar</a>
                 </nav>
 
             </div>
         </div>
     </div>
-   
-    
-   
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
+
 </body>
 
 </html>

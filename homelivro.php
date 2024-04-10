@@ -21,7 +21,7 @@
                     <p class="lead">
                         <a class="btn btn-primary btn-lg" href="cadastrolivro.php" role="button">cadastrar livros</a>
                         <a class="btn btn-primary btn-lg" href="pesquisalivro.php" role="button">pesquisar livros</a>
-                       
+
                     </p>
                 </div>
                 <a href="inicio.php" class="btn btn-info">Voltar</a>

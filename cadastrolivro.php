@@ -15,7 +15,7 @@
         <h1>Cadastro do livro</h1>
         <form action="cadli.php" method="post">
           <div class="mb-3">
-            <label for="nome" class="form-label">titulo do  livro</label>
+            <label for="nome" class="form-label">titulo do livro</label>
             <input type="text" class="form-control" name="titulo">
 
 

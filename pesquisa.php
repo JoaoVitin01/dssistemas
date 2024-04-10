@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <?php   
+    <?php
     $pesquisa = $_POST['busca'] ?? '';
     include "conexao.php";
 
     $sql = "SELECT * FROM usuario where nome LIKE '%$pesquisa%'";
-    $dados = mysqli_query($conexao,$sql);
+    $dados = mysqli_query($conexao, $sql);
     ?>
     <div class="container">
         <div class="row">
@@ -29,29 +29,29 @@
                         </form>
                     </div>
                     <table class="table table-hover">
-  <thead>
-    <tr>
-      
-      <th scope="col">Nome</th>
-      <th scope="col">Endereço</th>
-      <th scope="col">telefone</th>
-      <th scope="col">Data de nascimento</th>
-      <th scope="col">Email</th>
-      <th scope="col">Ações</th>
-      
-    </tr>
+                        <thead>
+                            <tr>
 
-  </thead>
-  <tbody>
-    <?php
-    while($linha = mysqli_fetch_assoc(($dados))){
-        $nome = $linha['nome'];
-        $endereco = $linha['endereco'];
-        $telefone = $linha['telefone'];
-        $data = $linha['data'];
-        $email = $linha['email'];
+                                <th scope="col">Nome</th>
+                                <th scope="col">Endereço</th>
+                                <th scope="col">telefone</th>
+                                <th scope="col">Data de nascimento</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Ações</th>
 
-        echo"<tr>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <?php
+                            while ($linha = mysqli_fetch_assoc(($dados))) {
+                                $nome = $linha['nome'];
+                                $endereco = $linha['endereco'];
+                                $telefone = $linha['telefone'];
+                                $data = $linha['data'];
+                                $email = $linha['email'];
+
+                                echo "<tr>
 
         <td>$nome</td>
         <td>$endereco</td>
@@ -66,24 +66,22 @@
         </td>
 
         </tr>";
+                            }
+                            ?>
 
-
-    }
-    ?>
-    
-  </tbody>
-</table>
-    <a href="inicio.php" class="btn btn-info">Voltar ao Inicio</a>
+                        </tbody>
+                    </table>
+                    <a href="inicio.php" class="btn btn-info">Voltar ao Inicio</a>
                 </nav>
 
             </div>
         </div>
     </div>
-   
-    
-   
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
+
 </body>
 
 </html>
