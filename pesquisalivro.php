@@ -10,11 +10,11 @@
 
 <body>
     <?php   
-    $pesquisa = $_POST['busca'] ?? '';
+    $pesquisali = $_POST['buscali'] ?? '';
     include "conexao.php";
 
-    $sql = "SELECT * FROM usuario where nome LIKE '%$pesquisa%'";
-    $dados = mysqli_query($conexao,$sql);
+    $sql = "SELECT * FROM livros where titulo LIKE '%$pesquisali%'";
+    $dadosli = mysqli_query($conexao,$sql);
     ?>
     <div class="container">
         <div class="row">
@@ -24,7 +24,7 @@
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <form class="d-flex" role="search" action="pesquisalivro.php" method="post">
-                            <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search" name="busca">
+                            <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search" name="buscali">
                             <button class="btn btn-outline-success" type="submit">pesquisar o livro desejado</button>
                         </form>
                     </div>
@@ -45,13 +45,13 @@
   </thead>
   <tbody>
     <?php
-    while($linha = mysqli_fetch_assoc(($dados))){
-        $titulo = $linha['titulo'];
-        $anopul = $linha['anopu'];
-        $cate = $linha['cat'];
-        $editora = $linha['editora'];
-        $isbn = $linha['isbn'];
-        $autor = $linha['autor'];
+    while($linhali = mysqli_fetch_assoc($dadosli)){
+        $titulo = $linhali['titulo']; 
+        $anopul = $linhali['anopubli'];
+        $cate = $linhali['categoria'];
+        $editora = $linhali['editora'];
+        $isbn = $linhali['isbn'];
+        $autor = $linhali['autor'];
 
         echo"<tr>
 
@@ -63,8 +63,8 @@
         <td>$autor</td>
         <td width=150px>
 
-        <a href='#' class='btn btn-success btn-sm'>Editar</a>
-        <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+        <a href='#' class='btn btn-success btn-sm'>Baixar</a>
+        
         
         </td>
 

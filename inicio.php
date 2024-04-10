@@ -37,14 +37,10 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item"><a href="homelivro.php"
-                                    class="nav-link font-weight-bold text-uppercase">livros</a></li>
-                            <li class="nav-item"><a href=""
-                                    class="nav-link font-weight-bold text-uppercase">Services</a></li>
-                            <li class="conta"><a href="" class="nav-link font-weight-bold text-uppercase">sua conta</a>
-                            
-                            <li class="nav-item"><a href="cadastro.php"
-                                    class="nav-link font-weight-bold text-uppercase">cadastre-se</a></li>
+                            <li class="nav-item"><a href="cadastro.php" class="nav-link font-weight-bold text-uppercase">cadastre-se</a></li>
+                            <li class="nav-item"><a href="homelivro.php" class="nav-link font-weight-bold text-uppercase">livros</a></li>
+                            <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">sua conta</a></li>
+                            <li class="conta"><a href="" class="nav-link font-weight-bold text-uppercase">ajuda</a>
                             </li>
 
                         </ul>

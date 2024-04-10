@@ -12,29 +12,29 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Cadastre-se</h1>
-        <form action="cad.php" method="post">
+        <h1>Cadastro do livro</h1>
+        <form action="cadli.php" method="post">
           <div class="mb-3">
             <label for="nome" class="form-label">titulo do  livro</label>
             <input type="text" class="form-control" name="titulo">
 
 
             <label for="anopul" class="form-label">ano publicação</label>
-            <input type="date" class="form-control" name="anopu">
+            <input type="date" class="form-control" name="anopubli">
 
 
-            <label for="telefone" class="form-label">categoria</label>
-            <input type="text" class="form-control" name="cat">
+            <label for="categoria" class="form-label">categoria</label>
+            <input type="text" class="form-control" name="categoria">
 
 
             <label for="editora" class="form-label">editora</label>
             <input type="text" class="form-control" name="editora">
 
             <label for="isbn" class="form-label">isbn</label>
-            <input type="number" class="form-control" name="isbn">
+            <input type="text" class="form-control" name="isbn">
 
-            <label for="senha" class="form-label">autor</label>
-            <input type="password" class="form-control" name="autor"> <br>
+            <label for="autor" class="form-label">autor</label>
+            <input type="text" class="form-control" name="autor"> <br>
 
             <input type="submit" class="btn btn-success">
 

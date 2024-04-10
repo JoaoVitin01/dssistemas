@@ -16,8 +16,8 @@
 
         include "conexao.php";
         $titulo = $_POST['titulo']; 
-        $anopul = $_POST['anopu'];
-        $cate = $_POST['cat'];
+        $anopul = $_POST['anopubli'];
+        $cate = $_POST['categoria'];
         $editora = $_POST['editora'];
         $isbn = $_POST['isbn'];
         $autor = $_POST['autor'];
@@ -26,7 +26,7 @@
         VALUES('$titulo','$anopul','$cate','$editora','$isbn','$autor')";
         if($sql = mysqli_query($conexao,$sql)){
 
-            mensagem("$nome cadastrado com sucesso!",'success');
+            mensagem("$titulo cadastrado com sucesso!",'success');
         }
         else{
             mensagem("erro ao cadastrar usuario",'danger');
@@ -34,7 +34,7 @@
         
         ?>
         <hr>
-         <a href="inicio.php" class="btn btn-primary">voltar</a>
+         <a href="homelivro.php" class="btn btn-primary">voltar</a>
 
       </div>
 
