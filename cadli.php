@@ -17,13 +17,13 @@
         include "conexao.php";
         $titulo = $_POST['titulo']; 
         $anopul = $_POST['anopu'];
-        $caregoria = $_POST['cat'];
+        $cate = $_POST['cat'];
         $editora = $_POST['editora'];
         $isbn = $_POST['isbn'];
         $autor = $_POST['autor'];
         
         $sql = "INSERT INTO livros(titulo,anopubli,categoria,editora,isbn,autor)
-        VALUES('$titulo','$anopu','$cat','$editora','$isbn','$autor')";
+        VALUES('$titulo','$anopul','$cate','$editora','$isbn','$autor')";
         if($sql = mysqli_query($conexao,$sql)){
 
             mensagem("$nome cadastrado com sucesso!",'success');

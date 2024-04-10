@@ -42,7 +42,7 @@
           </div>
 
         </form>
-        <a href="inicio.php" class=" btn btn-info">Voltar ao Inicio</a>
+        <a href="homelivro.php" class=" btn btn-info">Voltar</a>
 
 
 
